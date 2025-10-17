@@ -62,5 +62,5 @@ function continuarTocando() {
 // Altera as informações do livro (capítulo e áudio) toda vez que o capítulo é mudado
 function alterarInformacoes() {
     tituloAudio.textContent = `Capítulo ${audioAtual}`
-    audio.src = `/audios/${audioAtual}.mp3`
+    audio.src = `audios/${audioAtual}.mp3`
 }
