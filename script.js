@@ -27,7 +27,9 @@ botaoProximo.addEventListener("click", proximoAudio)
 function audioAnterior() {
     audioAtual > 1 ? audioAtual -= 1 : audioAtual = quantidadeAudios
     alterarInformacoes()
-    continuarTocando()
+
+    // Espera o audio novo carregar, então continua tocando
+    audio.addEventListener("loadedmetadata", continuarTocando)
 }
 
 // Inverte o estado do áudio (se está tocando, para de tocar... se não está tocando, então é iniciado)
